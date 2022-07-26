@@ -1,28 +1,25 @@
 #include <stdio.h>
 
 int main(void){
-  int num,num2,op,sum,sub,div,multi;
-  printf("Enter two numbers :");
-  scanf("%d""%d",&num,&num2);
-  printf("1)+\n2)-\n3)/\n4)*\nEnter the opertaion you want to execute:");
-  scanf("%d",&op);
-if(op == 1)
-{
-  sum = num +num2;
-  printf("Your answer is %d",sum);
-}
-  else if (op == 2)
-  {
-    sub = num-num2;
-    printf("Your answer is %d",sub);
+  int choice;
+  printf("1)RTX 3090ti\n2)Intel i9 900k\n3)Rysen 5 5000\n4)PS5\nSelect a order from the above :");
+scanf("%d",&choice);
+ switch(choice){
+   case 1:
+    printf("Your RTX 3090 will be coming soon");
+    break;
+   case 2:
+   printf("Your INTEL i9 900k will be coming soon");
+   break;
+   case 3:
+   printf("Your Rysen 5 5000 will be coming soon");
+   break; 
+   case 4:
+   printf("Your PS5 will be coming soon");
+   break;
+   default:
+   printf("incorrect input");
+   
   }
-  else if (op == 3)
-  {
-    div = num/num2;
-    printf("Your answer is %d",div);
-  }else if (op == 4)
-  {
-    multi = num *num2;
-    printf("Your answer is %d",multi);
-  }
+return 0;
 }
