@@ -1,22 +1,16 @@
 #include <stdio.h>
 
 int main(void){
-int flag=0,num,i;
-printf("Enter a number ");
+  int num,i,j;
+printf("Enter the number of layers for pyramid:");
 scanf("%d",&num);
-for (i=2;i<num;i++)
+for(i=1;i<=num;i++)
 {
-if(num%i==0)
+for(j=1;j<=i;j++)
 {
-  flag=flag+1;
-  break;
+printf("%d ",j);
 }
-}
-if(flag==0)
-{
-  printf("prime");
-}else{
-  printf("composite");
+printf("\n");
 }
 return 0;
-} 
+}
