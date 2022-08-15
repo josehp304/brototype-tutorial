@@ -1,25 +1,34 @@
 #include <stdio.h>
+#include <windows.h>
 #include <stdlib.h>
-int main(void){
-int i,array[100],lim,even_no=0;
-printf("Enter the size of array ");
-scanf("%d",&lim);
-for (i=0;i<lim;i++)
-{
-    scanf("%d",&array[i]);
-}
-for (i=0;i<lim;i++)
-{
-    if (array[i]%2==0)
-    {
-        even_no=even_no+1;
+int main(){
+    int h,m,s,gap;
+    gap = 1000;
+    printf("Enter your time :\n");
+    scanf("%d%d%d",&h,&m,&s);
+    if(h>12|| m>60|| s>60){
+        printf("error \n");
+        exit(0);
     }
+    while (1)
+    {
+        s++;
+        if(s==60){
+            m++;
+            s=0;
+        }
+        if(m==60){
+            h++;
+            m=0;
+        }
+        if(h>12){
+            h=1;
+        }
+        printf("\n clock: \n");
+        printf("\n %02d:%02d:%02d",h,m,s);
+        Sleep(gap);
+        system("cls");
+
+    }
+    
 }
-printf("Number of even numbers are: %d",even_no);
-
-return 0;
-}
-
-
-
-
