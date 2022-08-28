@@ -3,7 +3,7 @@
 int main()
 {
     char str[20];
-    int i,j,k=1;
+    int i,j,k=0;
 
     printf("Enter a name plz:");
     scanf("%s",str);
@@ -16,7 +16,7 @@ int main()
     }
     }
 
-    if (k=1){
+    if (k==0){
         printf("The word is palidrome\n");
 
     }
